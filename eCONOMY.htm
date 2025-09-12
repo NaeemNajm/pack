@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ইকোনমি উমরাহ প্যাকেজ (১৪ দিন)</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://raw.githubusercontent.com/NaeemNajm/pic/refs/heads/main/logo3.png" type="image/png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins for headings, Hind Siliguri for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@600;700&family=Atma:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide-icons@0.378.0/dist/lucide.min.js"></script>
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Anek Bangla', sans-serif;
+            background-color: #F8FAFC;
+        }
+        h1, h2, h3, h4, h5, h6, .font-headline {
+            font-family: 'Atma', serif;
+        }
+        .hero-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 20%, rgba(0,0,0,0) 100%);
+        }
+        .day-card, .place-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .day-card:hover, .place-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        .day-card-content {
+            flex-grow: 1;
+        }
+        .special-tip {
+            border-left: 4px solid #F59E0B; /* amber-500 */
+            background-color: #FFFBEB; /* amber-50 */
+        }
+        .local-experience {
+            border-left: 4px solid #10B981; /* emerald-500 */
+            background-color: #F0FDF4; /* emerald-50 */
+        }
+        .place-card img, .day-card img {
+            transition: opacity 0.3s ease;
+        }
+        .place-card:hover img, .day-card:hover img {
+            opacity: 0.85;
+        }
+    </style>
+</head>
+<body class="text-gray-700">
+
+    <!-- Header Section -->
+    <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-center items-center">
+            <div class="flex items-center space-x-3">
+                 <img src="https://raw.githubusercontent.com/NaeemNajm/pic/refs/heads/main/logo3.png" alt="Al-Hikmah Logo" class="h-10 w-10">
+                <h1 class="text-2xl font-bold text-gray-800 font-headline">আল-হিকমাহ ট্যুরস এন্ড ট্রাভেলস</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-[60vh] bg-cover bg-center flex items-end" style="background-image: url('https://raw.githubusercontent.com/NaeemNajm/pic/refs/heads/main/1.jpg');">
+            <div class="absolute inset-0 hero-overlay"></div>
+            <div class="relative z-10 text-white text-center w-full pb-12 px-4">
+                <h2 class="text-4xl md:text-5xl font-bold font-headline">স্ট্যান্ডার্ড উমরাহ প্যাকেজ (১৪ দিন)</h2>
+                <p class="mt-4 text-lg text-gray-200">মক্কায় ৮ রাত ও মদিনায় ৫ রাতের একটি আধ্যাত্মিক সফর</p>
+            </div>
+        </section>
+
+        <!-- Accommodation Section -->
+        <section class="py-16 md:py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold text-emerald-700 font-headline">আপনার আরামদায়ক আবাসন</h3>
+                    <p class="mt-2 text-gray-600 max-w-2xl mx-auto">আপনার ইবাদতের মুহূর্তগুলোকে আরও প্রশান্তিময় করতে আমরা হারাম শরীফের নিকটবর্তী মানসম্মত হোটেল নির্বাচন করেছি।</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Makkah Hotel -->
+                    <div class="day-card overflow-hidden"><a href="https://en.wikipedia.org/wiki/Mecca" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/NaeemNajm/pic/refs/heads/main/LULUAT%20AL%20DOOR.png" alt="Makkah Hotel" class="w-full h-56 object-cover"></a><div class="p-6"><h4 class="text-2xl font-bold text-gray-800">মক্কা হোটেল</h4><p class="font-semibold text-gray-500 mt-1">হারাম থেকে হাঁটা দূরত্বে</p><p class="text-gray-600 mt-3">মসজিদে হারাম থেকে ১০-১৫ মিনিট হাঁটার দূরত্বে অবস্থিত মানসম্মত হোটেলে আবাসন, যা আপনাকে স্বাচ্ছন্দ্যে জামাতে অংশ নিতে সহায়তা করবে।</p></div></div>
+                    <!-- Madinah Hotel -->
+                    <div class="day-card overflow-hidden"><a href="https://en.wikipedia.org/wiki/Medina" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/NaeemNajm/pic/refs/heads/main/RAWAFED%20AL%20MADINA.png" alt="Madinah Hotel" class="w-full h-56 object-cover"></a><div class="p-6"><h4 class="text-2xl font-bold text-gray-800">মদিনা হোটেল</h4><p class="font-semibold text-gray-500 mt-1">মসজিদে নববীর নিকটে</p><p class="text-gray-600 mt-3">মসজিদে নববী থেকে ১০-১২ মিনিট হাঁটার দূরত্বে হোটেলে অবস্থান, যেখান থেকে রাসূল (ﷺ)-এর রওজা যিয়ারত এবং নামাজ আদায় সহজ হবে।</p></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Places of Interest Section -->
+        <section class="py-16 md:py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold text-emerald-700 font-headline">সফরের আকর্ষণীয় স্থানসমূহ</h3>
+                    <p class="mt-2 text-gray-600 max-w-2xl mx-auto">এক নজরে দেখে নিন আমাদের আধ্যাত্মিক যাত্রার কিছু ঝলক।</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <div class="place-card overflow-hidden"><a href="https://en.wikipedia.org/wiki/Kaaba" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/NaeemNajm/pic/refs/heads/main/1.jpg" alt="কাবা শরীফ" class="w-full h-48 object-cover"></a><div class="p-5"><h4 class="text-xl font-bold">কাবা শরীফ</h4><p class="text-gray-600 mt-1 text-sm">মুসলিম উম্মাহর কেন্দ্রবিন্দু।</p></div></div>
+                    <div class="place-card overflow-hidden"><a href="https://en.wikipedia.org/wiki/Al-Masjid_an-Nabawi" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/NaeemNajm/pic/refs/heads/main/madina-night-20220702180014.jpg" alt="মসজিদে নববী" class="w-full h-48 object-cover"></a><div class="p-5"><h4 class="text-xl font-bold">মসজিদে নববী</h4><p class="text-gray-600 mt-1 text-sm">রাসূল (ﷺ) এর স্মৃতিবিজড়িত শান্তির নীড়।</p></div></div>
+                     <div class="place-card overflow-hidden"><a href="https://en.wikipedia.org/wiki/Jabal_al-Nour" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/NaeemNajm/pic/refs/heads/main/Jabbal_An-Nour_-_Makkah_(2241558560).jpg" alt="জাবাল আল-নূর" class="w-full h-48 object-cover"></a><div class="p-5"><h4 class="text-xl font-bold">হেরা পর্বত</h4><p class="text-gray-600 mt-1 text-sm">যেখানে প্রিয় নবী (ﷺ) প্রথম ওহী লাভ করেন।</p></div></div>
+                    <div class="place-card overflow-hidden"><a href="https://en.wikipedia.org/wiki/Quba_Mosque" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/NaeemNajm/pic/refs/heads/main/Quba_Mosque_2013_02.jpg" alt="মসজিদে কুবা" class="w-full h-48 object-cover"></a><div class="p-5"><h4 class="text-xl font-bold">মসজিদে কুবা</h4><p class="text-gray-600 mt-1 text-sm">ইসলামের ইতিহাসে নির্মিত প্রথম মসজিদ।</p></div></div>
+                    <div class="place-card overflow-hidden"><a href="https://en.wikipedia.org/wiki/Mount_Uhud" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/NaeemNajm/pic/refs/heads/main/Mount_Uhud.JPG" alt="উহুদ পাহাড়" class="w-full h-48 object-cover"></a><div class="p-5"><h4 class="text-xl font-bold">উহুদ প্রান্তর</h4><p class="text-gray-600 mt-1 text-sm">ইসলামের দ্বিতীয় গুরুত্বপূর্ণ যুদ্ধের সাক্ষী।</p></div></div>
+                    <div class="place-card overflow-hidden"><a href="https://en.wikipedia.org/wiki/Badr,_Saudi_Arabia" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/NaeemNajm/pic/refs/heads/main/badr.jpg" alt="বদর প্রান্তর" class="w-full h-48 object-cover"></a><div class="p-5"><h4 class="text-xl font-bold">বদর প্রান্তর</h4><p class="text-gray-600 mt-1 text-sm">সত্য ও মিথ্যার পার্থক্যকারী ঐতিহাসিক যুদ্ধের ময়দান।</p></div></div>
+                    <div class="place-card overflow-hidden"><a href="https://en.wikipedia.org/wiki/Jeddah" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/NaeemNajm/pic/refs/heads/main/JEDDA.jpg" alt="জেদ্দা শহর" class="w-full h-48 object-cover"></a><div class="p-5"><h4 class="text-xl font-bold">জেদ্দা শহর</h4><p class="text-gray-600 mt-1 text-sm">লোহিত সাগরের তীরের আধুনিক বন্দর নগরী।</p></div></div>
+                    <div class="place-card overflow-hidden"><a href="https://en.wikipedia.org/wiki/Taif" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/NaeemNajm/pic/refs/heads/main/wmremove-transformed.jpeg" alt="তায়েফ শহর" class="w-full h-48 object-cover"></a><div class="p-5"><h4 class="text-xl font-bold">তায়েফ শহর</h4><p class="text-gray-600 mt-1 text-sm">পাহাড় ও মেঘের রাজ্য, 'গোলাপের শহর' নামে পরিচিত।</p></div></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Itinerary Section -->
+        <section class="py-16 md:py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-10"><h3 class="text-3xl md:text-4xl font-bold text-emerald-700">১৪ দিনের বিস্তারিত ভ্রমণসূচী</h3></div>
+                
+                <!-- Makkah Part -->
+                <div class="mb-16">
+                    <div class="text-center mb-10"><h3 class="text-2xl md:text-3xl font-bold text-gray-800">🕋 মক্কা পর্ব (৯ দিন / ৮ রাত)</h3></div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="day-card p-6"><span class="font-headline font-semibold text-emerald-600">দিন ১:</span><h4 class="text-xl font-bold mt-1 text-gray-800">আগমন ও উমরাহ</h4><ul class="list-disc list-inside text-gray-600 mt-3 space-y-2 day-card-content"><li>ঢাকা থেকে জেদ্দার উদ্দেশ্যে যাত্রা এবং মক্কার হোটেলে চেক-ইন।</li><li>বিশ্রাম শেষে গাইডের তত্ত্বাবধানে উমরাহ পালন।</li></ul><div class="special-tip p-3 mt-4 rounded-md"><p class="text-sm font-semibold text-amber-800">বিশেষ পরামর্শ: প্রথমবার কাবা শরীফ দেখার মুহূর্তটি জীবনের অন্যতম স্মরণীয় মুহূর্ত। এসময় আল্লাহর কাছে মন খুলে দোয়া করুন।</p></div></div>
+                        <div class="day-card p-6"><span class="font-headline font-semibold text-emerald-600">দিন ২:</span><h4 class="text-xl font-bold mt-1 text-gray-800">বিশ্রাম ও ইবাদত</h4><ul class="list-disc list-inside text-gray-600 mt-3 space-y-2 day-card-content"><li>ভ্রমণের ক্লান্তি দূর করতে এবং হারাম শরীফের পরিবেশে নিজেকে মানিয়ে নিতে আজকের দিনটি ব্যক্তিগত ইবাদতের জন্য।</li></ul><div class="local-experience p-3 mt-4 rounded-md"><p class="text-sm font-semibold text-emerald-800">অভিজ্ঞতা: হারাম শরীফের ছাদ থেকে কাবা চত্বরের দৃশ্য এক ভিন্ন আধ্যাত্মিক অনুভূতি দেয়। এশার নামাজের পর ছাদে গিয়ে কিছুক্ষণ বসতে পারেন।</p></div></div>
+                        <div class="day-card p-6"><span class="font-headline font-semibold text-emerald-600">দিন ৩:</span><h4 class="text-xl font-bold mt-1 text-gray-800">জুম্মা আদায়</h4><ul class="list-disc list-inside text-gray-600 mt-3 space-y-2 day-card-content"><li>লাখো মুসল্লির সাথে মসজিদে হারামে জুম্মার নামাজ আদায়ের অভিজ্ঞতা অর্জন করুন।</li><li>খুব সকালে হারাম শরীফে গিয়ে উত্তম স্থান গ্রহণ করার চেষ্টা করুন।</li></ul><div class="special-tip p-3 mt-4 rounded-md"><p class="text-sm font-semibold text-amber-800">বিশেষ পরামর্শ: জুম্মার দিন প্রচণ্ড ভিড় থাকে। হোটেলের নিকটবর্তী গেট ব্যবহার করুন এবং ধৈর্য ধারণ করুন।</p></div></div>
+                        <div class="day-card p-6"><span class="font-headline font-semibold text-emerald-600">দিন ৪:</span><h4 class="text-xl font-bold mt-1 text-gray-800">মক্কার যিয়ারাহ</h4><ul class="list-disc list-inside text-gray-600 mt-3 space-y-2 day-card-content"><li>সকালের নাস্তার পর আমাদের নিজস্ব পরিবহনে মক্কার ঐতিহাসিক স্থানসমূহ (জাবাল-এ-সাওর, জাবাল-এ-নূর, মিনা, আরাফাত) পরিদর্শন।</li></ul><div class="local-experience p-3 mt-4 rounded-md"><p class="text-sm font-semibold text-emerald-800">অভিজ্ঞতা: আরাফাতের ময়দানে অবস্থিত জাবালে রহমত পাহাড়ে উঠে দোয়া করার একটি বিশেষ অনুভূতি রয়েছে। সুযোগ হলে সেখানে কিছুক্ষণ অবস্থান করুন।</p></div></div>
+                        <div class="day-card p-6"><span class="font-headline font-semibold text-emerald-600">দিন ৫:</span><h4 class="text-xl font-bold mt-1 text-gray-800">ঐচ্ছিক তায়েফ সফর</h4><ul class="list-disc list-inside text-gray-600 mt-3 space-y-2 day-card-content"><li>ব্যক্তিগত ইবাদতের পাশাপাশি মেঘ ও পাহাড়ের শহর তায়েফ ভ্রমণের সুযোগ (ঐচ্ছিক)।</li><li>তায়েফের শীতল আবহাওয়া ও মনোরম প্রাকৃতিক দৃশ্য উপভোগ করুন।</li></ul><div class="local-experience p-3 mt-4 rounded-md"><p class="text-sm font-semibold text-emerald-800">অভিজ্ঞতা: তায়েফ তার সুস্বাদু ফল, বিশেষ করে ডালিম এবং আঙ্গুরের জন্য বিখ্যাত। স্থানীয় ফলের বাজার থেকে তাজা ফলের স্বাদ নিতে ভুলবেন না। আর ফেরার সময় মিকাত থেকে ২য় উমরার নিয়ত ইহরাম বেঁধে চলে আসুন</p></div></div>
+                        <div class="day-card p-6"><span class="font-headline font-semibold text-emerald-600">দিন ৬:</span><h4 class="text-xl font-bold mt-1 text-gray-800">তৃতীয় উমরাহ'র সুযোগ</h4><ul class="list-disc list-inside text-gray-600 mt-3 space-y-2 day-card-content"><li>ভ্রমণের ক্লান্তি দূর করতে এবং আশেপাশের পরিবেশ এক্সপ্লোর করতে আজকের দিনটি ব্যক্তিগত ভাবে কাটান</li><li>আপনি নিকটবর্তী কোনো পাহাড়ের চূড়া, যেমন 'খান্দামা', মক্কা জাদুঘর ও আরো অনেক কিছু নিজে এক্সপ্লোর করতে পারেন</li><li>শরীরে সামর্থ্য থাকলে নিকটবর্তী মিকাতে গিয়ে ইহরাম বেঁধে আসতে পারেন</li></ul><div class="special-tip p-3 mt-4 rounded-md"><p class="text-sm font-semibold text-amber-800">বিশেষ পরামর্শ: এখানে যত খরচ করবেন তত সওয়াব। এমনকি নিজের প্রয়োজনে খরচ করলেও।</p></div></div>
+                        <div class="day-card p-6"><span class="font-headline font-semibold text-emerald-600">দিন ৭:</span><h4 class="text-xl font-bold mt-1 text-gray-800">ঐচ্ছিক জেদ্দা সফর</h4><ul class="list-disc list-inside text-gray-600 mt-3 space-y-2 day-card-content"><li>লোহিত সাগরের তীরের আধুনিক শহর জেদ্দা ভ্রমণের সুযোগ (ঐচ্ছিক)।</li><li>ঐতিহাসিক আল-বালাদ (ওল্ড টাউন) এবং ভাসমান মসজিদ ঘুরে দেখতে পারেন।</li></ul><div class="local-experience p-3 mt-4 rounded-md"><p class="text-sm font-semibold text-emerald-800">অভিজ্ঞতা: জেদ্দা সামুদ্রিক খাবারের জন্য বিখ্যাত। সাগরের পাড়ের কোনো রেস্তোরাঁয় তাজা মাছের স্বাদ নিতে পারেন।</p></div></div>
+                        <div class="day-card p-6"><span class="font-headline font-semibold text-emerald-600">দিন ৮:</span><h4 class="text-xl font-bold mt-1 text-gray-800">কেনাকাটা ও প্রস্তুতি</h4><ul class="list-disc list-inside text-gray-600 mt-3 space-y-2 day-card-content"><li>মদিনা যাত্রার জন্য প্রস্তুতি গ্রহণ এবং প্রিয়জনদের জন্য হারাম শরীফের নিকটস্থ মার্কেট থেকে কেনাকাটা।</li><li>বেশি বেশি নফল তাওয়াফ করার সুযোগ গ্রহণ করুন।</li></ul><div class="special-tip p-3 mt-4 rounded-md"><p class="text-sm font-semibold text-amber-800">বিশেষ পরামর্শ: সাশ্রয়ী কেনাকাটার জন্য বিন দাউদ (Bin Dawood) সুপারশপে যেতে পারেন। আতর, সুরমা, তসবিহ ও জায়নামাজ ভালো পাওয়া যায়।</p></div></div>
+                    </div>
+                </div>
+                
+                <!-- Madinah Part -->
+                <div>
+                    <div class="text-center mb-10"><h3 class="text-2xl md:text-3xl font-bold text-gray-800">🕌 মদিনা পর্ব (৬ দিন / ৫ রাত)</h3></div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="day-card p-6"><span class="font-headline font-semibold text-emerald-600">দিন ৯:</span><h4 class="text-xl font-bold mt-1 text-gray-800">মদিনার পথে</h4><ul class="list-disc list-inside text-gray-600 mt-3 space-y-2 day-card-content"><li>সকালে বিদায় প্রস্তুতি সম্পন্ন করে মদিনার উদ্দেশ্যে যাত্রা এবং হোটেলে চেক-ইন।</li></ul><div class="local-experience p-3 mt-4 rounded-md"><p class="text-sm font-semibold text-emerald-800">অভিজ্ঞতা: মদিনায় প্রবেশের সাথে সাথে যে প্রশান্তি অনুভব হয়, তা এক কথায় অসাধারণ। রাসূল (ﷺ) এর শহরে আপনাকে স্বাগতম।</p></div></div>
+                        <div class="day-card p-6"><span class="font-headline font-semibold text-emerald-600">দিন ১০:</span><h4 class="text-xl font-bold mt-1 text-gray-800">রওজা যিয়ারত</h4><ul class="list-disc list-inside text-gray-600 mt-3 space-y-2 day-card-content"><li>মসজিদে নববীতে রাসূল (ﷺ) এর রওজায় সালাম পেশ এবং একবার রিয়াজুল জান্নাতে পারমিটের ব্যবস্থা আমরা করে দেবো</li></ul><div class="special-tip p-3 mt-4 rounded-md"><p class="text-sm font-semibold text-amber-800">বিশেষ পরামর্শ: একবার আমরা পারমিট নিয়ে দিলে পরে রিয়াজুল জান্নাতে প্রবেশের জন্য Nusuk অ্যাপের মাধ্যমে ইন্সট্যান্ট সময় নিন। সেখানে অত্যন্ত বিনয়ী থাকুন ও দুই রাকাত নফল নামাজ পড়ুন।</p></div></div>
+                        <div class="day-card p-6"><span class="font-headline font-semibold text-emerald-600">দিন ১১:</span><h4 class="text-xl font-bold mt-1 text-gray-800">মদিনার যিয়ারাহ</h4><ul class="list-disc list-inside text-gray-600 mt-3 space-y-2 day-card-content"><li>সকালে মদিনার দর্শনীয় স্থানসমূহ (মসজিদে কুবা, উহুদ ময়দান, মসজিদে কিবলাতাইন ইত্যাদি) পরিদর্শন।</li></ul><div class="local-experience p-3 mt-4 rounded-md"><p class="text-sm font-semibold text-emerald-800">অজানা তথ্য: মসজিদে কুবায় দুই রাকাত নফল নামাজ আদায় করলে একটি উমরাহ'র সওয়াব পাওয়া যায়। তাই পবিত্র হয়ে সেখানে নামাজ আদায়ের চেষ্টা করুন।</p></div></div>
+                        <div class="day-card p-6"><span class="font-headline font-semibold text-emerald-600">দিন ১২:</span><h4 class="text-xl font-bold mt-1 text-gray-800">ঐচ্ছিক বদর প্রান্তর ভ্রমণ</h4><ul class="list-disc list-inside text-gray-600 mt-3 space-y-2 day-card-content"><li>ইসলামের প্রথম যুদ্ধক্ষেত্র বদর প্রান্তর, বিরে শেফা. অলৌকিক  জ্বীন পাহাড় (ওয়াদি আল-জ্বীন) ভ্রমণের সুযোগ (ঐচ্ছিক)।</li></ul><div class="special-tip p-3 mt-4 rounded-md"><p class="text-sm font-semibold text-amber-800">বিশেষ পরামর্শ: বদর প্রান্তরে গেলে ইসলামের সেই গৌরবময় ইতিহাসের কথা স্মরণ করুন এবং শহীদদের জন্য দোয়া করুন।</p></div></div>
+                        <div class="day-card p-6"><span class="font-headline font-semibold text-emerald-600">দিন ১৩:</span><h4 class="text-xl font-bold mt-1 text-gray-800">ব্যক্তিগত সময়</h4><ul class="list-disc list-inside text-gray-600 mt-3 space-y-2 day-card-content"><li>ইবাদত এবং প্রিয়জনদের জন্য মদিনার বিখ্যাত বাজার থেকে আজওয়া খেজুর ও অন্যান্য স্যুভেনিয়ার কেনার জন্য উন্মুক্ত দিন।</li></ul><div class="local-experience p-3 mt-4 rounded-md"><p class="text-sm font-semibold text-emerald-800">অভিজ্ঞতা: মদিনার ১ নং গেটের কাছে তুর্কি খাবারের দোকানগুলোতে মজাদার কাবাব ও রুটি পাওয়া যায়। চেখে দেখতে পারেন।</p></div></div>
+                        <div class="day-card p-6"><span class="font-headline font-semibold text-emerald-600">দিন ১৪:</span><h4 class="text-xl font-bold mt-1 text-gray-800">স্বদেশ প্রত্যাবর্তন</h4><ul class="list-disc list-inside text-gray-600 mt-3 space-y-2 day-card-content"><li>সকালে রাসূল (ﷺ) এর রওজায় বিদায়ী সালাম পেশ করে মদিনা বিমানবন্দর থেকে ঢাকার উদ্দেশ্যে যাত্রা।</li></ul><div class="special-tip p-3 mt-4 rounded-md"><p class="text-sm font-semibold text-amber-800">সতর্কতা: বিমানবন্দরে জমজমের পানি প্যাক করার জন্য নির্ধারিত কাউন্টার থাকে। লাগেজের ওজন সম্পর্কে সতর্ক থাকুন।</p></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+<!-- বিশেষ দ্রষ্টব্য সেকশন -->
+<section class="py-12 bg-slate-50">
+    <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto bg-amber-50 border-l-4 border-amber-400 text-amber-900 p-6 rounded-lg shadow-sm flex items-start space-x-4">
+            <!-- Icon -->
+            <div class="flex-shrink-0">
+                <i data-lucide="alert-triangle" class="w-8 h-8 text-amber-500"></i>
+            </div>
+            <!-- Content -->
+            <div>
+                <h4 class="text-xl font-bold font-headline mb-2">বিশেষ দ্রষ্টব্য</h4>
+                <p class="text-gray-700 leading-relaxed">
+                    এই ভ্রমণসূচীটি একটি নমুনা মাত্র,যা আপনাকে আমাদের পরিকল্পনা সম্পর্কে একটি প্রাথমিক ধারণা দেওয়ার জন্য প্রস্তুত করা হয়েছে। ফ্লাইট সিডিউল, স্থানীয় পরিস্থিতি, আবহাওয়া বা অন্যান্য অনিবার্য কারণে এই পরিকল্পনায় পরিবর্তন আনা হতে পারে। যেকোনো পরিবর্তনে সম্মানিত হাজীদের সুবিধা ও নিরাপত্তাকেই সর্বোচ্চ অগ্রাধিকার দেওয়া হবে। আল্লাহ উত্তমপরিকল্পনাকারী।
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6 text-center">
+            <img src="https://raw.githubusercontent.com/NaeemNajm/pic/refs/heads/main/logo.png" alt="Al-Hikmah Logo" class="h-32 w-64 mx-auto mb-4">
+             <h4 class="text-2xl font-bold font-headline">যোগাযোগ</h4>
+             <p class="text-gray-400 mt-2 max-w-lg mx-auto">আপনার যেকোনো জিজ্ঞাসা বা বুকিংয়ের জন্য আমাদের সাথে যোগাযোগ করুন। আপনার সেবায় আমরা সর্বদা নিয়োজিত।</p>
+             <div class="mt-6 text-gray-300 space-y-2">
+                 <p class="flex items-center justify-center"><i data-lucide="map-pin" class="w-4 h-4 mr-2 text-emerald-400"></i>৪-১, লেভেল -৩, ক-৫৪/৪, মাদ্রাসা বিল্ডিং, যমুনা ফিউচার পার্ক সংলগ্ন, বসুন্ধরা আ/এ রোড, ঢাকা-১২২৯</p>
+                 <p class="flex items-center justify-center"><i data-lucide="phone" class="w-4 h-4 mr-2 text-emerald-400"></i><a href="tel:+8801914137050" class="hover:text-emerald-400">+8801914137050</a></p>
+                 <p class="flex items-center justify-center"><i data-lucide="mail" class="w-4 h-4 mr-2 text-emerald-400"></i><a href="mailto:alhikmahtourbd@gmail.com" class="hover:text-emerald-400">alhikmahtourbd@gmail.com</a></p>
+                 <div class="flex justify-center items-center mt-4 space-x-4">
+                     <a href="https://www.facebook.com/share/19nGKjScpT/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="facebook" class="w-6 h-6"></i></a>
+                 </div>
+             </div>
+             <div class="border-t border-gray-700 mt-8 pt-6">
+                <p class="text-gray-500 text-sm">&copy; ২০২৫ আল-হিকমাহ ট্যুরস এন্ড ট্রাভেলস। সর্বস্বত্ব সংরক্ষিত।</p>
+                <p class="text-gray-500 text-sm mt-2">ডিজাইন ও পরিকল্পনায়: <a href="https://wa.me/8801865263939" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors">নাজমুজ্জামান নাঈম</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        window.addEventListener('load', function() {
+            if (typeof lucide !== 'undefined') {
+                try {
+                    lucide.createIcons();
+                } catch (error) {
+                    console.error("Error creating lucide icons:", error);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
