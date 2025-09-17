@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>আল-হিকমাহ ট্যুর এন্ড ট্রাভেলস - উমরাহ ক্যালেন্ডার</title>
-    <link rel="icon" href="https://raw.githubusercontent.com/NaeemNajm/pic/refs/heads/main/logo.png" type="image/png">
+    <link rel="icon" href="https://raw.githubusercontent.com/NaeemNajm/pic/main/logo.png" type="image/png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Tiro+Bangla:wght@400;500;600;700&display=swap');
         :root { 
@@ -20,7 +20,7 @@
         }
         body::before {
             content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background-image: url('https://raw.githubusercontent.com/NaeemNajm/pic/refs/heads/main/Gemini_Generated_Image_cyzp83cyzp83cyzp.png');
+            background-image: url('https://raw.githubusercontent.com/NaeemNajm/pic/main/Gemini_Generated_Image_cyzp83cyzp83cyzp.png');
             background-repeat: no-repeat; background-position: center center;
             background-size: cover; opacity: 0.08; z-index: -1;
         }
@@ -60,38 +60,39 @@
         .clock-digital-info .instruction-text { font-size: 0.8rem; margin: 5px 0; font-weight: 500; text-shadow: 0 1px 3px rgba(0,0,0,0.5); opacity: 0.9; }
         .clock-digital-info .time { font-size: 2rem; font-weight: 700; line-height: 1.1; text-shadow: 0 1px 5px rgba(0,0,0,0.7); }
         .clock-digital-info .date { font-size: 0.85rem; margin-top: 5px; text-shadow: 0 1px 4px rgba(0,0,0,0.6); font-weight: 500;}
-        .pendulum-frame { position: absolute; top: 80px; left: 50%; transform: translateX(-50%); width: 160px; height: 320px; border: 10px solid var(--clock-body-color); border-radius: 80px; border-top: none; z-index: 4; }
+        .pendulum-frame { position: absolute; top: 80px; left: 50%; transform: translateX(-50%); width: 160px; height: 320px; border: 10px solid var(--clock-body-color); border-radius: 80px; }
         @keyframes pendulum-swing { 0%, 100% { transform: rotate(12deg); } 50% { transform: rotate(-12deg); } }
         .pendulum { position: absolute; top: 55%; left: 50%; width: 8px; height: 220px; transform-origin: top center; animation: pendulum-swing 4s ease-in-out infinite; }
         .pendulum-bob { position: absolute; bottom: 0; left: 50%; width: 60px; height: 60px; background: var(--clock-body-color); border-radius: 50%; transform: translateX(-50%); }
-        .folder-panel { background: #fff; box-shadow: 0 8px 25px rgba(0,0,0,0.2); width: 280px; height: 280px; border-radius: 50%; position: relative; margin-top: 25px; display: flex; flex-direction: column; justify-content: center; align-items: center; transform: scale(0); opacity: 0; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); border: 4px solid var(--clock-body-color); }
-        .folder-panel.show { transform: scale(1); opacity: 1; }
+        .folder-panel { background: #fff; box-shadow: 0 8px 25px rgba(0,0,0,0.2); width: 280px; height: 280px; border-radius: 50%; position: relative; margin-top: 25px; display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0; transform: scale(0.95); transition: all 0.3s; pointer-events: none; }
+        .folder-panel.show { transform: scale(1); opacity: 1; pointer-events: auto; }
         .folder-content h4 { margin: 0 0 10px 0; color: #333; font-size: 1.2rem; }
         .folder-panel .package-list { list-style: none; padding: 0; margin: 0; width: 80%; }
-        .folder-panel .package-list li a { display: block; padding: 8px; text-decoration: none; color: #0056b3; border-radius: 5px; transition: background-color 0.2s ease; font-size: 0.9rem; text-align: center; }
+        .folder-panel .package-list li a { display: block; padding: 8px; text-decoration: none; color: #0056b3; border-radius: 5px; transition: background-color 0.2s ease; font-size: 0.9rem; text-align: left; }
         .folder-panel .package-list li a:hover { background-color: #f0f0f0; }
         .chain-title { text-align: center; }
-        /* --- ডেস্কটপ বাটন কন্টেইনার --- */
         .chain-actions { display: flex; gap: 15px; margin: 15px 0; }
-        .action-btn { color: white; padding: 10px 20px; border: none; border-radius: 8px; cursor: pointer; font-family: 'Tiro Bangla', sans-serif; font-size: 1rem; font-weight: 500; transition: all 0.3s ease; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); text-decoration: none; }
+        .action-btn { color: white; padding: 10px 20px; border: none; border-radius: 8px; cursor: pointer; font-family: 'Tiro Bangla', sans-serif; font-size: 1rem; font-weight: 500; transition: all 0.2s; background-color: var(--clock-body-color);}
         .action-btn:hover { transform: translateY(-2px); }
         #scroll-to-active-btn { background-color: #006400; }
         #checklist-btn { background-color: var(--clock-accent-color); }
-
-        #schedule-chain { width: 300px; height: 100%; overflow-y: scroll; position: relative; cursor: grab; user-select: none; padding: 20px 0; scrollbar-width: none; } #schedule-chain::-webkit-scrollbar { display: none; } #schedule-chain::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 4px; background: linear-gradient(180deg, #d4af37, #b48d2d, #d4af37); transform: translateX(-50%); z-index: 1; } .bead { position: relative; width: 130px; height: 130px; border-radius: 50%; margin: 40px auto; z-index: 2; transition: all 0.3s ease; cursor: pointer; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border: 3px solid transparent; background: linear-gradient(145deg, var(--bead-bg-color), color-mix(in srgb, var(--bead-bg-color) 85%, #000)); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); } .bead:hover { transform: scale(1.08); } .bead .bead-month, .bead .bead-day, .bead .bead-weekday, .bead .bead-year { color: #fff; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); } .bead .bead-month { font-size: 0.85rem; } .bead .bead-day { font-size: 2.2rem; } .bead .bead-weekday { font-size: 0.85rem; } .bead .bead-year { font-size: 0.75rem; } .bead.active { transform: scale(1.15); border: 4px solid #FFD700; } 
-        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 100; display: none; justify-content: center; align-items: center; backdrop-filter: blur(5px); } .modal-content { background: #fff; border-radius: 50%; width: 350px; height: 350px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; box-sizing: border-box; } .modal-close { position: absolute; top: 20px; right: 20px; font-size: 2rem; font-weight: bold; cursor: pointer; color: #888; } .modal-content h3 { margin: 0 0 15px 0; color: #005000; font-size: 1rem; } #modal-package-list { list-style: none; padding: 0; margin: 0; width: 100%;} #modal-package-list li a { display: block; padding: 8px 10px; text-decoration: none; color: #0056b3; border-radius: 8px; margin-bottom: 5px; background: #f7f7f7; transition: all 0.2s ease; font-weight: 500; font-size: 0.9rem;} #modal-package-list li a:hover { background: #e9e9e9; transform: translateX(5px); }
+        #schedule-chain { width: 300px; height: 100%; overflow-y: scroll; position: relative; cursor: grab; user-select: none; padding: 20px 0; scrollbar-width: none; }
+        #schedule-chain::-webkit-scrollbar { display: none; }
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 100; display: none; justify-content: center; align-items: center; backdrop-filter: blur(2px);}
+        .modal-content { background: #fff; padding: 30px; border-radius: 10px; min-width: 350px; max-width: 90vw; }
+        .modal-close { position: absolute; top: 10px; right: 20px; font-size: 2rem; cursor: pointer; }
         .mobile-actions, .mobile-modal-overlay { display: none; }
-        .site-footer { position: fixed; bottom: 0; left: 0; width: 100%; padding: 8px 0; background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(4px); text-align: center; z-index: 99; font-size: 0.85rem; color: #444; border-top: 1px solid rgba(0,0,0,0.1); } .site-footer p { margin: 0; } .site-footer a { color: #0056b3; text-decoration: none; font-weight: 600; }
+        .site-footer { position: fixed; bottom: 0; left: 0; width: 100%; padding: 8px 0; background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(4px); text-align: center; z-index: 99; font-size: 0.95rem;}
         
         @media (max-width: 992px) {
             body { overflow-y: auto; } .side-panel { display: none; } .main-container { padding: 0; } .chain-wrapper { width: 100%; height: 100vh; } #schedule-chain { padding: 0 10px 80px 10px; }
             .mobile-actions { display: flex; flex-direction: column; position: fixed; bottom: 80px; right: 20px; z-index: 50; gap: 20px; }
             .mobile-action-item { display: flex; flex-direction: column; align-items: center; cursor: pointer; text-decoration: none; }
-            .action-icon { width: 60px; height: 60px; background: var(--clock-body-color); border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 12px rgba(0,0,0,0.2); border: 2px solid #fff; transition: transform 0.2s ease; }
+            .action-icon { width: 60px; height: 60px; background: var(--clock-body-color); border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1);}
             .mobile-action-item:hover .action-icon { transform: scale(1.1); }
             .action-icon svg { width: 32px; height: 32px; fill: #fff; }
             .action-label { color: #333; font-weight: 600; margin-top: 5px; font-size: 0.8rem; background: rgba(255,255,255,0.7); padding: 1px 6px; border-radius: 4px; }
-            .mobile-modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 100; display: none; justify-content: center; align-items: center; backdrop-filter: blur(5px); }
+            .mobile-modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 100; display: none; justify-content: center; align-items: center; }
             .mobile-modal-content { background: #fff; padding: 25px; border-radius: 15px; width: 90%; max-width: 400px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); }
             .mobile-modal-content h4 { margin: 0 0 15px 0; color: #005000; text-align: center; }
             .site-footer { font-size: 0.8rem; padding: 5px 0;}
@@ -101,11 +102,36 @@
 <body>
     <div class="main-container">
         <div class="side-panel left">
-            <div class="pendulum-clock-wrapper" id="clock-wrapper-left"><div class="clock-container"><div class="analog-clock" id="analog-clock-bd"></div><div class="clock-digital-info"><h3>বাংলাদেশ</h3><h5 class="instruction-text">ঘড়িতে ক্লিক করে হজ্ব প্যাকেজ দেখুন</h5><div id="bangladesh-time" class="time"></div><div id="bangladesh-date" class="date"></div></div></div><div class="pendulum-frame"></div><div class="pendulum"><div class="pendulum-bob"></div></div></div>
-            <div class="folder-panel" id="folder-panel-left"><div class="folder-content"><h4>হজ প্যাকেজ</h4><ul class="package-list"><li><a href="#" class="dummy-package-link">হজ প্যাকেজ (শীঘ্রই আসছে)</a></li></ul></div></div>
+            <div class="pendulum-clock-wrapper" id="clock-wrapper-left">
+                <div class="clock-container">
+                    <div class="analog-clock" id="analog-clock-bd">
+                        <div class="hour-hand hand"></div>
+                        <div class="minute-hand hand"></div>
+                    </div>
+                    <div class="clock-digital-info">
+                        <h3>বাংলাদেশ সময়</h3>
+                        <div class="instruction-text">ক্লিক করুন</div>
+                        <div class="time" id="bangladesh-time"></div>
+                        <div class="date" id="bangladesh-date"></div>
+                    </div>
+                </div>
+                <div class="pendulum-frame">
+                    <div class="pendulum">
+                        <div class="pendulum-bob"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="folder-panel" id="folder-panel-left">
+                <div class="folder-content">
+                    <h4>হজ প্যাকেজ</h4>
+                    <ul class="package-list">
+                        <li><a href="#" class="dummy-package-link">হজ প্যাকেজ (শীঘ্রই)</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="chain-wrapper">
-            <div class="chain-title"><img src="https://raw.githubusercontent.com/NaeemNajm/pic/refs/heads/main/logo.png" alt="Al-Hikmah Logo"></div>
+            <div class="chain-title"><img src="https://raw.githubusercontent.com/NaeemNajm/pic/main/logo.png" alt="Al-Hikmah Logo"></div>
             <div class="chain-actions">
                 <button class="action-btn" id="scroll-to-active-btn">আসন্ন কাফেলা</button> 
                 <a href="https://raw.githack.com/NaeemNajm/pic/main/SamanList.htm" target="_blank" class="action-btn" id="checklist-btn">চেকলিস্ট</a>
@@ -113,30 +139,70 @@
             <div id="schedule-chain"></div>
         </div>
         <div class="side-panel right">
-            <div class="pendulum-clock-wrapper" id="clock-wrapper-right"><div class="clock-container"><div class="analog-clock" id="analog-clock-sa"></div><div class="clock-digital-info"><h3>সৌদি আরব</h3><h5 class="instruction-text">ঘড়িতে ক্লিক করে কাস্টম প্যাকেজ দেখুন</h5><div id="saudi-time" class="time"></div><div id="saudi-date" class="date"></div></div></div><div class="pendulum-frame"></div><div class="pendulum"><div class="pendulum-bob"></div></div></div>
-            <div class="folder-panel" id="folder-panel-right"><div class="folder-content"><h4>কাস্টমাইজ উমরাহ</h4><ul class="package-list" id="custom-package-list"></ul></div></div>
+            <div class="pendulum-clock-wrapper" id="clock-wrapper-right">
+                <div class="clock-container">
+                    <div class="analog-clock" id="analog-clock-sa">
+                        <div class="hour-hand hand"></div>
+                        <div class="minute-hand hand"></div>
+                    </div>
+                    <div class="clock-digital-info">
+                        <h3>সৌদি সময়</h3>
+                        <div class="instruction-text">ক্লিক করুন</div>
+                        <div class="time" id="saudi-time"></div>
+                        <div class="date" id="saudi-date"></div>
+                    </div>
+                </div>
+                <div class="pendulum-frame">
+                    <div class="pendulum">
+                        <div class="pendulum-bob"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="folder-panel" id="folder-panel-right">
+                <div class="folder-content">
+                    <h4>কাস্টমাইজ উমরাহ</h4>
+                    <ul class="package-list" id="custom-package-list"></ul>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="modal-overlay" id="package-modal"><div class="modal-content"><span class="modal-close" id="modal-close-btn">&times;</span><h3 id="modal-title"></h3><ul id="modal-package-list"></ul></div></div>
+    <div class="modal-overlay" id="package-modal">
+        <div class="modal-content">
+            <span class="modal-close" id="modal-close-btn">&times;</span>
+            <h3 id="modal-title"></h3>
+            <ul id="modal-package-list"></ul>
+        </div>
+    </div>
 
     <div class="mobile-actions">
         <a href="https://raw.githack.com/NaeemNajm/pic/main/SamanList.htm" target="_blank" class="mobile-action-item" id="mobile-checklist-item">
             <div class="action-icon" id="mobile-checklist-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M192 224h192M192 320h192M192 416h192M128 224h-1.398c-23.235 0-42.105-18.373-42.105-41.053 0-22.68 18.87-41.053 42.105-41.053S169.21 160.267 169.21 182.947c0 10.453-4.21 20.053-11.158 26.88L128 240l-29.053-29.053c-6.947-6.827-11.158-16.427-11.158-26.88C87.79 160.267 106.66 141.893 129.895 141.893c23.234 0 42.105 18.373 42.105 41.054C172 205.627 153.13 224 129.895 224H128zM128 320H128c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zM128 416H128c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M192 224h192M192 320h192M192 416h192M128 224h-1.398c-23.235 0-42.105-18.373-42.105-41.053 0-22.68 18.87-41.053 42[..."></path></svg>
             </div>
             <span class="action-label">চেকলিস্ট</span>
         </a>
         <div class="mobile-action-item" id="mobile-hajj-item">
-            <div class="action-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM304 208V120c0-13.3-10.7-24-24-24s-24 10.7-24 24v88c0 13.3 10.7 24 24 24s24-10.7 24-24zM248 392c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z" fill="#fff" /></svg></div>
+            <div class="action-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM304 208V12[..."></path></svg></div>
             <span class="action-label">হজ্ব</span>
         </div>
         <div class="mobile-action-item" id="mobile-umrah-item">
-            <div class="action-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.6 56.4c-2 8.8-9.9 15.3-19.1 15.3h-80.8c-9.2 0-17.1-6.5-19.1-15.3l-12.6-56.4c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .4-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.6-56.4c2-8.8 9.9-15.3 19.1-15.3h80.8c9.2 0 17.1 6.5 19.1 15.3l12.6 56.4c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.4 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z" fill="#fff" /></svg></div>
+            <div class="action-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4[..."></path></svg></div>
             <span class="action-label">কাস্টম</span>
         </div>
     </div>
-    <div class="mobile-modal-overlay" id="mobile-hajj-modal"><div class="mobile-modal-content"><ul class="package-list"><li><a href="#" class="dummy-package-link">হজ প্যাকেজ (শীঘ্রই আসছে)</a></li></ul></div></div>
-    <div class="mobile-modal-overlay" id="mobile-umrah-modal"><div class="mobile-modal-content"><h4>কাস্টমাইজ উমরাহ</h4><ul class="package-list" id="mobile-custom-package-list"></ul></div></div>
+    <div class="mobile-modal-overlay" id="mobile-hajj-modal">
+        <div class="mobile-modal-content">
+            <ul class="package-list">
+                <li><a href="#" class="dummy-package-link">হজ প্যাকেজ (শীঘ্রই)</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="mobile-modal-overlay" id="mobile-umrah-modal">
+        <div class="mobile-modal-content">
+            <h4>কাস্টমাইজ উমরাহ</h4>
+            <ul class="package-list" id="mobile-custom-package-list"></ul>
+        </div>
+    </div>
 
     <footer class="site-footer"><p>Developed by <a href="https://wa.me/8801865263939" target="_blank">নাজমুজ্জামান নাঈম</a></p></footer>
 
@@ -150,9 +216,9 @@
                     data.push({
                         departureDate: date.toISOString().split('T')[0],
                         packages: [ 
-                            { name: "ইকোনমি প্যাকেজ", url: "https://raw.githack.com/NaeemNajm/pack/refs/heads/main/eCONOMY.htm" }, 
-                            { name: "স্ট্যান্ডার্ড প্যাকেজ", url: "https://raw.githack.com/NaeemNajm/pack/refs/heads/main/Standard.htm" }, 
-                            { name: "VIP প্যাকেজ", url: "https://raw.githack.com/NaeemNajm/pack/refs/heads/main/VIPmain.htm" } 
+                            { name: "ইকোনমি প্যাকেজ", url: "https://raw.githack.com/NaeemNajm/pack/main/eCONOMY.htm" }, 
+                            { name: "স্ট্যান্ডার্ড প্যাকেজ", url: "https://raw.githack.com/NaeemNajm/pack/main/Standard.htm" }, 
+                            { name: "VIP প্যাকেজ", url: "https://raw.githack.com/NaeemNajm/pack/main/VIPmain.htm" } 
                         ]
                     });
                 } date.setDate(date.getDate() + 1);
@@ -160,10 +226,10 @@
         }
         const schedules = generateSchedules(2020, 18);
         const customPackages = [ 
-            { name: "৮ অক্টোবর ভিআইপি প্যাকেজ", url: "https://raw.githack.com/NaeemNajm/pack/refs/heads/main/VIP.htm" },
-            { name: "১৭ সেপ্টেম্বর উমরাহ ও মিশর", url: "https://raw.githack.com/NaeemNajm/pack/refs/heads/main/U+E.htm" }, 
-            { name: "১০ দিনের বিশেষ প্যাকেজ (বুয়েট স্যার) ", url: "https://raw.githack.com/NaeemNajm/pack/refs/heads/main/10DAYS.htm" } 
-            { name: "১৭ সেপ্টেম্বর সৌদি এয়ারলাইন্স গ্রুপ ", url: "https://raw.githack.com/NaeemNajm/pack/refs/heads/main/17-SEP-GROUP.htm" }
+            { name: "৮ অক্টোবর ভিআইপি প্যাকেজ", url: "https://raw.githack.com/NaeemNajm/pack/main/VIP.htm" },
+            { name: "১৭ সেপ্টেম্বর উমরাহ ও মিশর", url: "https://raw.githack.com/NaeemNajm/pack/main/U+E.htm" }, 
+            { name: "১০ দিনের বিশেষ প্যাকেজ (বুয়েট স্যার)", url: "https://raw.githack.com/NaeemNajm/pack/main/10DAYS.htm" },
+            { name: "১৭ সেপ্টেম্বর সৌদি এয়ারলাইন্স গ্রুপ", url: "https://raw.githack.com/NaeemNajm/pack/main/17-SEP-GROUP.htm" }
         ];
         
         document.addEventListener('DOMContentLoaded', () => {
@@ -183,7 +249,7 @@
             let activeBeadElement = null;
             const bdClock = { h: document.querySelector('#analog-clock-bd'), timeEl: document.getElementById('bangladesh-time'), dateEl: document.getElementById('bangladesh-date'), tz: 'Asia/Dhaka' };
             const saClock = { h: document.querySelector('#analog-clock-sa'), timeEl: document.getElementById('saudi-time'), dateEl: document.getElementById('saudi-date'), tz: 'Asia/Riyadh' };
-            [bdClock.h, saClock.h].forEach(c => { if(c && !c.querySelector('.marker')) { for(let i=1; i<=12; i++) { const marker = document.createElement('div'); marker.className='marker'; marker.style.transform=`translateX(-50%) rotate(${i*30}deg)`; c.appendChild(marker); } c.innerHTML += `<div class="hand hour-hand"></div><div class="hand minute-hand"></div>`; } });
+            [bdClock.h, saClock.h].forEach(c => { if(c && !c.querySelector('.marker')) { for(let i=1; i<=12; i++) { const marker = document.createElement('div'); marker.className='marker'; marker.style.transform = `rotate(${i*30}deg) translate(-50%, 0)`; c.appendChild(marker); } } });
             function updateAllClocks() {
                 const now = new Date();
                 [bdClock, saClock].forEach(c => {
@@ -200,12 +266,54 @@
                     c.h.querySelector('.hour-hand').style.transform = `translateX(-50%) rotate(${hRatio * 360}deg)`;
                 });
             }
-            function initializeChain() { const chainContainer = document.getElementById('schedule-chain'); chainContainer.innerHTML = ''; const now = new Date(); now.setHours(0, 0, 0, 0); let upcomingFound = false; schedules.forEach(schedule => { const bead = document.createElement('div'); bead.className = 'bead'; const departureDate = new Date(schedule.departureDate); const color = monthColors[departureDate.getMonth()]; bead.style.setProperty('--bead-bg-color', color); const bnMonth = new Intl.DateTimeFormat('bn-BD', { month: 'long' }).format(departureDate); const bnDay = new Intl.DateTimeFormat('bn-BD', { day: 'numeric' }).format(departureDate); const bnYear = new Intl.DateTimeFormat('bn-BD', { year: 'numeric' }).format(departureDate); const bnWeekday = new Intl.DateTimeFormat('bn-BD', { weekday: 'long' }).format(departureDate); bead.innerHTML = `<div class="bead-month">${bnMonth}</div><div class="bead-day">${bnDay}</div><div class="bead-weekday">${bnWeekday}</div><div class="bead-year">${bnYear}</div>`;
-            bead.onclick = () => { const fullDate = new Intl.DateTimeFormat('bn-BD', { dateStyle: 'full' }).format(departureDate); modalTitle.textContent = `${fullDate} তারিখের প্যাকেজ`; modalPackageList.innerHTML = ''; if (schedule.packages && schedule.packages.length > 0) { schedule.packages.forEach(pkg => { const li = document.createElement('li'); li.innerHTML = `<a href="${pkg.url}" target="_blank">${pkg.name}</a>`; modalPackageList.appendChild(li); }); } else { modalPackageList.innerHTML = '<li>এই তারিখে কোনো প্যাকেজ নেই।</li>'; } modal.style.display = 'flex'; };
-            chainContainer.appendChild(bead); if (!upcomingFound && departureDate >= now) { bead.classList.add('active'); activeBeadElement = bead; upcomingFound = true; } }); if (!activeBeadElement && chainContainer.lastChild) { activeBeadElement = chainContainer.lastChild; activeBeadElement.classList.add('active'); } if (activeBeadElement) { setTimeout(() => { activeBeadElement.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 500); } }
+            function initializeChain() {
+                const chainContainer = document.getElementById('schedule-chain');
+                chainContainer.innerHTML = '';
+                const now = new Date(); now.setHours(0, 0, 0, 0); let upcomingFound = false;
+                schedules.forEach((schedule, idx) => {
+                    const departureDate = new Date(schedule.departureDate);
+                    const bead = document.createElement('div');
+                    bead.className = 'bead';
+                    bead.style.background = monthColors[departureDate.getMonth() % monthColors.length];
+                    bead.title = schedule.departureDate;
+                    bead.innerHTML = `<span>${departureDate.toLocaleDateString('bn-BD', { year: 'numeric', month: 'short', day: 'numeric' })}</span>`;
+                    bead.onclick = () => {
+                        const fullDate = new Intl.DateTimeFormat('bn-BD', { dateStyle: 'full' }).format(departureDate);
+                        modalTitle.textContent = `${fullDate} তারিখের প্যাকেজসমূহ`;
+                        modalPackageList.innerHTML = '';
+                        schedule.packages.forEach(pkg => {
+                            const li = document.createElement('li');
+                            li.innerHTML = `<a href="${pkg.url}" target="_blank">${pkg.name}</a>`;
+                            modalPackageList.appendChild(li);
+                        });
+                        modal.style.display = 'flex';
+                    };
+                    chainContainer.appendChild(bead);
+                    if (!upcomingFound && departureDate >= now) {
+                        bead.classList.add('active');
+                        activeBeadElement = bead;
+                        upcomingFound = true;
+                    }
+                });
+                if (!activeBeadElement && chainContainer.firstChild) {
+                    chainContainer.firstChild.classList.add('active');
+                    activeBeadElement = chainContainer.firstChild;
+                }
+            }
             document.getElementById('scroll-to-active-btn').addEventListener('click', () => { if (activeBeadElement) activeBeadElement.scrollIntoView({ behavior: 'smooth', block: 'center' }); });
             document.querySelectorAll('.dummy-package-link').forEach(link => { link.addEventListener('click', (e) => { e.preventDefault(); alert('বিস্তারিত তথ্য শীঘ্রই যোগ করা হবে।'); }); });
-            const slider = document.getElementById('schedule-chain'); let isDown = false, startY, scrollTop; if(slider){ slider.addEventListener('mousedown', (e) => { isDown = true; startY = e.pageY - slider.offsetTop; scrollTop = slider.scrollTop; }); slider.addEventListener('mouseleave', () => isDown = false); slider.addEventListener('mouseup', () => isDown = false); slider.addEventListener('mousemove', (e) => { if (!isDown) return; e.preventDefault(); const y = e.pageY - slider.offsetTop; const walk = (y - startY) * 2; slider.scrollTop = scrollTop - walk; });}
+            const slider = document.getElementById('schedule-chain'); let isDown = false, startY, scrollTop;
+            if(slider){
+                slider.addEventListener('mousedown', (e) => { isDown = true; startY = e.pageY - slider.offsetTop; scrollTop = slider.scrollTop; slider.style.cursor = 'grabbing'; });
+                slider.addEventListener('mouseleave', () => { isDown = false; slider.style.cursor = 'grab'; });
+                slider.addEventListener('mouseup', () => { isDown = false; slider.style.cursor = 'grab'; });
+                slider.addEventListener('mousemove', (e) => {
+                    if (!isDown) return;
+                    e.preventDefault();
+                    const y = e.pageY - slider.offsetTop;
+                    slider.scrollTop = scrollTop - (y - startY);
+                });
+            }
             
             document.getElementById('clock-wrapper-left').addEventListener('click', () => { document.getElementById('folder-panel-left').classList.toggle('show'); });
             document.getElementById('clock-wrapper-right').addEventListener('click', () => { document.getElementById('folder-panel-right').classList.toggle('show'); });
